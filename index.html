@@ -1,101 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Happy Birthday Tom 🎂</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#e8f7ff,#fff0f7,#fff8df);color:#27324a;min-height:100vh;overflow-x:hidden}
-.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-.card{width:min(94%,620px);background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-radius:30px;padding:30px 22px;text-align:center;box-shadow:0 22px 70px rgba(40,60,100,.18);border:1px solid rgba(255,255,255,.9)}
-.cat{font-size:5rem;animation:bounce 1.8s infinite}
-h1{font-size:clamp(2.5rem,10vw,4.5rem);line-height:1;margin:12px 0}
-h2{margin:8px 0 18px}
-p{font-size:1.05rem;line-height:1.75}
-button{border:0;border-radius:999px;padding:14px 23px;margin:8px;font-size:1rem;font-weight:800;cursor:pointer;background:#6c4cff;color:#fff;box-shadow:0 10px 24px rgba(108,76,255,.28)}
-button.alt{background:#ff6b91}
-.hidden{display:none}
-.reveal{animation:fade .7s ease}
-.code{font:800 1.3rem monospace;letter-spacing:3px;background:#f3f0ff;padding:15px;border-radius:16px;margin:18px auto;max-width:360px}
-.note{font-size:.9rem;opacity:.7}
-.photo-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:20px 0}
-.photo{width:125px;height:125px;border-radius:24px;background:linear-gradient(145deg,#4c5364,#9da7ba);display:flex;align-items:center;justify-content:center;font-size:4rem;box-shadow:0 10px 25px rgba(0,0,0,.12);transform:rotate(-3deg)}
-.photo:nth-child(2){transform:rotate(3deg);background:linear-gradient(145deg,#f0c9d9,#fff)}
-.photo:nth-child(3){transform:rotate(-2deg);background:linear-gradient(145deg,#c9e8f0,#fff)}
-.float{position:fixed;bottom:-50px;animation:float 6s linear infinite;pointer-events:none}
-@keyframes bounce{50%{transform:translateY(-10px) rotate(-4deg)}}
-@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
-@keyframes float{from{transform:translateY(0) rotate(0);opacity:0}15%{opacity:1}to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
-</style>
-</head>
-<body>
-<div class="screen">
-<div class="card">
-  <div class="cat">🐱</div>
-  <h1>Happy Birthday Tom! 🎂</h1>
-  <h2>✨ A little surprise for you, Khushi ✨</h2>
-  <p>
-    Five years of friendship, countless memories, random conversations,
-    laughs and moments worth remembering. Here's to many more years of
-    friendship and even more memories together. 💜
-  </p>
+Create a complete interactive mobile-first Raksha Bandhan website as a single self-contained project using HTML, CSS and JavaScript.
 
-  <div class="photo-row" aria-label="Tom themed placeholders">
-    <div class="photo">🐱</div>
-    <div class="photo">😺</div>
-    <div class="photo">🐾</div>
-  </div>
+IMPORTANT:
+Do not make this a simple slideshow, poster or video.
+It must be a REAL interactive website with working buttons, transitions and separate interactive sections.
 
-  <button onclick="openSurprise()">🎁 Your Gift Is Waiting</button>
-  <button class="alt" onclick="playBirthday()">🎵 Play Birthday Tune</button>
+The website is made by a BROTHER for his SISTER named "Tom".
 
-  <div id="surprise" class="hidden reveal">
-    <h2>🎉 Surprise Unlocked!</h2>
-    <p>
-      Khushi, I hope your birthday is full of happiness, laughter and
-      unforgettable moments. No matter how much time passes, I genuinely
-      hope this friendship keeps getting stronger. Here's to <b>5+ years</b>
-      of friendship and many more to come! 🥳
-    </p>
-    <div class="code">1234-5678</div>
-    <p class="note">Demo redeem code — replace this with the real gift code later.</p>
-    <div style="font-size:2.5rem">🎁🐱🎂✨💜</div>
-  </div>
+OVERALL STYLE:
+- Mobile-first vertical 9:16 design
+- Cute, playful and emotional Raksha Bandhan theme
+- White/light background
+- Red and orange decorative patterned border around the page
+- Rounded cards
+- Red/orange outlined buttons
+- Handwritten-style headings
+- Cute emojis and small decorative elements
+- Smooth animations and transitions
+- Keep everything simple, clean and visually attractive
+- The design should feel like a personal gift made by a brother, not a generic commercial template
 
-  <p class="note">Made as a little surprise • 18 August</p>
-</div>
-</div>
+SCREEN 1 — INTRO:
 
-<script>
-function openSurprise(){
-  document.getElementById('surprise').classList.remove('hidden');
-  for(let i=0;i<35;i++){
-    const e=document.createElement('div');
-    e.className='float';
-    e.textContent=['🎈','✨','💜','🐾','🎉','🎁'][Math.floor(Math.random()*6)];
-    e.style.left=Math.random()*100+'vw';
-    e.style.fontSize=(18+Math.random()*25)+'px';
-    e.style.animationDuration=(4+Math.random()*4)+'s';
-    document.body.appendChild(e);
-    setTimeout(()=>e.remove(),8000);
-  }
-}
-let audioCtx;
-function playBirthday(){
-  // Simple synthesized birthday-style melody; no recorded song is used.
-  const notes=[264,264,297,264,352,330,264,264,297,264,396,352];
-  audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
-  let t=audioCtx.currentTime;
-  notes.forEach((f,i)=>{
-    const o=audioCtx.createOscillator(), g=audioCtx.createGain();
-    o.frequency.value=f; o.type='sine';
-    g.gain.setValueAtTime(.0001,t+i*.28);
-    g.gain.exponentialRampToValueAtTime(.16,t+i*.28+.03);
-    g.gain.exponentialRampToValueAtTime(.0001,t+i*.28+.24);
-    o.connect(g).connect(audioCtx.destination); o.start(t+i*.28); o.stop(t+i*.28+.25);
-  });
-}
-</script>
-</body>
-</html>
+At the top show a cute handwritten heading:
+
+"Look what I made for my sister on Rakhi special ❤️"
+
+Below it show a playful message:
+
+"I have made something for you..."
+"Do you wanna see it?"
+
+Show two buttons:
+
+"YES ❤️"
+"NO 😭"
+
+YES button:
+Open the main gift experience with a smooth transition.
+
+NO button:
+Show a funny reaction screen:
+
+"HOW DARE YOU?! 😭"
+
+and a button:
+
+"TRY AGAIN"
+
+TRY AGAIN should return to the YES/NO screen.
+
+MAIN GIFT SCREEN:
+
+Show a heading:
+
+"Each gift has something 🎁"
+"Click on them, one by one!"
+
+Below the heading display exactly THREE large gift boxes in a clean vertical/mobile layout.
+
+Gift 1 🎁
+Gift 2 🎁
+Gift 3 🎁
+
+Each gift must actually be clickable.
+
+When Gift 1 is clicked:
+Open a separate gift screen containing a cute sister message.
+
+Use:
+"You are my favorite sister ❤️"
+"You are not just my sister, you're my best friend too."
+
+Add cute animations/decorations.
+
+Include a button:
+"BACK TO GIFTS"
+
+When Gift 2 is clicked:
+Open another separate screen with a playful/funny brother-to-sister message.
+
+Use:
+"Best friends by choice, siblings by life 😂❤️"
+
+Add a few short funny lines about sibling teasing, fighting, helping each other and still being best friends.
+
+Include:
+"BACK TO GIFTS"
+
+When Gift 3 is clicked:
+Open another separate screen with a more emotional message.
+
+Use:
+
+"Tom, you're not just my sister.
+You're one of my best friends.
+No matter how much we fight, tease or annoy each other,
+you'll always have a special place in my life. ❤️"
+
+Include:
+"BACK TO GIFTS"
+
+After returning from any gift, the user must return to the exact three-gift selection screen.
+
+CERTIFICATE SECTION:
+
+Create a large decorative certificate.
+
+Title:
+
+"BEST SISTER OF THE WORLD 🏆"
+
+Recipient:
+
+"TOM"
+
+Certificate text:
+
+"This certificate is proudly presented to Tom,
+for being an amazing sister,
+a great friend,
+and one of the most special people in my life."
+
+Add:
+"Presented by: Your Brother ❤️"
+
+Make it look like a fun award/certificate rather than a serious official document.
+
+MESSAGE SECTION:
+
+Create a section titled:
+
+"WRITE YOUR MESSAGE ❤️"
+
+Include two buttons:
+
+"USE DEFAULT"
+"GENERATE WITH AI"
+
+The default message should be:
+
+"To my forever best friend ❤️
+
+I'm really grateful to have you in my life.
+You're not just my sister, you're one of my best friends.
+Thank you for always being there.
+No matter how much we fight or tease each other,
+you'll always be special to me.
+
+Happy Raksha Bandhan, Tom! ❤️"
+
+Also display:
+
+"YOU ARE MY BEST FRIEND ❤️"
+
+AWARD SECTION:
+
+Create another cute award card:
+
+"BEST SISTER AWARD 🏆"
+
+Recipient:
+"TOM"
+
+Add a short line:
+
+"For being an amazing sister and an even better friend."
+
+FINAL SCREEN:
+
+End with a warm message:
+
+"Happy Raksha Bandhan, Tom! ❤️"
+
+"From your brother,
+with lots of love and unlimited sibling fights 😂"
+
+Add subtle hearts, confetti and a gentle celebration animation.
+
+NAVIGATION REQUIREMENTS:
+
+- Every button must work.
+- YES opens the gift experience.
+- NO opens the funny rejection screen.
+- TRY AGAIN returns to the previous screen.
+- Every gift opens its own screen.
+- Every gift screen has a BACK TO GIFTS button.
+- Back to Gifts always returns to the three gift boxes.
+- Scrolling must be smooth.
+- The website must work properly on Android phones.
+- Keep the interface vertically optimized for a phone.
+- Do not add unnecessary pages or features.
+- Do not turn it into a generic greeting card.
+- The relationship throughout the website must be BROTHER → SISTER.
+- The sister's name must always be TOM.
+- Never use "brother" when referring to Tom.
+- Use "sister" consistently.
