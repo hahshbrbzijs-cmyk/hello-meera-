@@ -1,198 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rakhi — For My Sister</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For My Sister Mannu — Concept C</title>
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:Arial,sans-serif}
-body{
-  background:#0b0709;
-  color:#fff4ea;
-  overflow-x:hidden;
-}
-.app{
-  width:min(100%,560px);
-  min-height:100vh;
-  margin:auto;
-  padding:24px 18px 45px;
-  background:
-    radial-gradient(circle at 50% 0%,#65142a 0,#250912 38%,#0b0709 78%);
-}
-.screen{display:none;min-height:calc(100vh - 70px);animation:show .35s ease}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Georgia,serif}
+body{background:#120b18;color:#f8efe6}
+.app{width:min(100%,560px);min-height:100vh;margin:auto;overflow:hidden;
+background:linear-gradient(160deg,#120b18,#21112d 48%,#0b0912);padding:22px 18px 42px}
+.screen{display:none;min-height:calc(100vh - 64px);animation:enter .45s ease}
 .screen.active{display:flex;flex-direction:column}
 .center{justify-content:center;align-items:center;text-align:center}
-@keyframes show{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-
-h1,h2,h3{margin:0 0 16px;line-height:1.08}
-h1{font-size:40px;color:#ffd6c2}
-h2{font-size:34px;color:#ffb7aa}
-p{line-height:1.6;color:#e7cbc0}
-.card{
-  width:100%;
-  padding:28px 20px;
-  border:1px solid #b94a5f;
-  border-radius:25px;
-  background:linear-gradient(145deg,#1b0d12,#10090d);
-  box-shadow:0 18px 45px #0008;
-  text-align:center;
-}
-.small{font-size:13px;color:#b99b96}
-.btn{
-  border:0;
-  border-radius:999px;
-  padding:13px 25px;
-  margin:7px 3px;
-  font-weight:700;
-  cursor:pointer;
-  color:#26090d;
-  background:linear-gradient(135deg,#ffb27f,#ff6c83);
-}
-.btn.secondary{
-  background:#1b0b10;
-  color:#ffc2b2;
-  border:1px solid #b94a5f;
-}
-.decor{font-size:30px;margin-bottom:18px}
-.gifts{display:grid;gap:14px;width:100%;margin-top:18px}
-.gift{
-  width:100%;
-  min-height:112px;
-  border:1px solid #8e3349;
-  border-radius:22px;
-  background:linear-gradient(135deg,#261018,#140a0e);
-  color:#ffe7dc;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:13px;
-  font-size:22px;
-  font-weight:700;
-  box-shadow:0 10px 28px #0007;
-  cursor:pointer;
-}
-.gift:active{transform:scale(.98)}
-.giftIcon{font-size:42px}
-.certificate{
-  margin-top:25px;
-  padding:32px 18px;
-  background:#fff7e9;
-  color:#3d1b18;
-  border:5px double #bc7b35;
-  border-radius:18px;
-  text-align:center;
-}
-.certificate h2{color:#8c2638;font-size:32px}
-.badge{
-  display:inline-block;
-  padding:8px 18px;
-  border-radius:999px;
-  background:#ffe0e3;
-  color:#9a2d40;
-  font-weight:800;
-  font-size:22px;
-}
-.giftPage .card{min-height:430px;display:flex;flex-direction:column;justify-content:center}
-.big{font-size:65px;margin-bottom:10px}
-.tease{
-  margin:18px 0;
-  padding:14px;
-  border-radius:16px;
-  background:#210d13;
-  border:1px dashed #a6465b;
-  color:#eecbc2;
-}
-.back{margin-top:22px}
+@keyframes enter{from{opacity:0;transform:scale(.97) translateY(12px)}to{opacity:1;transform:none}}
+h1{font-size:42px;line-height:1.02;margin:0 0 16px;color:#f7d9e8}
+h2{font-size:31px;line-height:1.08;margin:0 0 15px;color:#e8b9ff}
+p{font-size:15px;line-height:1.65;color:#d8cadb}
+.card{width:100%;padding:27px 19px;border-radius:26px;background:#17101fe8;border:1px solid #9b6bc055;box-shadow:0 22px 55px #0009}
+.btn{border:1px solid #e5a7cf;border-radius:999px;padding:13px 24px;margin:8px 3px;background:linear-gradient(135deg,#d77bb1,#8e68dc);color:#fff;font-weight:bold;cursor:pointer}
+.btn.alt{background:#191020;color:#e7b9dc}
+.orbit{width:290px;height:290px;border-radius:50%;position:relative;margin:4px auto 25px;border:1px solid #c77ee655;box-shadow:0 0 70px #a64cbb25,inset 0 0 45px #d98bd015}
+.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #e2b0dc30}
+.orbit:before{width:210px;height:210px}.orbit:after{width:125px;height:125px}
+.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:75px;filter:drop-shadow(0 0 25px #f2b4d8);animation:float 2.4s ease-in-out infinite}
+@keyframes float{50%{transform:translate(-50%,-57%) scale(1.04)}}
+.orbit i{position:absolute;font-style:normal;font-size:28px;filter:drop-shadow(0 0 9px #e7a6d0)}
+.o1{left:48%;top:3%}.o2{right:4%;top:47%}.o3{left:44%;bottom:2%}.o4{left:3%;top:47%}
+.label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#bda4c8;text-align:center}
+.gifts{display:grid;gap:12px;margin-top:20px}
+.gift{border:1px solid #795a8f;border-radius:20px;background:#181021;color:#f6e9f4;padding:18px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:14px}
+.gift .ico{font-size:38px}.gift b{font-size:19px}.gift small{display:block;color:#ad9bb1;margin-top:4px}
+.reveal{min-height:400px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.quote{padding:17px;border:1px solid #8b5d9d;border-radius:17px;background:#0f0a15;color:#e9d5e5;margin:15px 0}
+.stamp{display:inline-block;padding:8px 15px;border:1px solid #c88cc0;border-radius:50px;color:#eab6db;margin-bottom:15px}
+.certificate{background:#f2e5d4;color:#342031;padding:25px 17px;border-radius:12px;border:4px double #8d5278;text-align:center;transform:rotate(-1deg);box-shadow:0 18px 35px #0008}
+.certificate h2{color:#71375d}.certificate p{color:#543c4f}.seal{font-size:48px}
+.name{color:#8c3f72;font-size:26px;font-style:italic;font-weight:bold;margin:8px 0 12px}
 </style>
 </head>
 <body>
 <div class="app">
 
 <section id="home" class="screen active center">
-  <div class="decor">🪢 ❤️ 🪔 ❤️ 🪢</div>
-  <div class="card">
-    <h1>For My Sister ❤️</h1>
-    <p>Okay, this is your little Rakhi surprise.</p>
-    <p><strong>No serious speech. No emotional drama. 😂</strong></p>
-    <p>Just a few things that every sister deserves to hear.</p>
-    <button class="btn" onclick="go('gifts')">Let's See 🎁</button>
+  <div class="label">Concept C</div>
+  <div class="orbit">
+    <span class="o1">✦</span><span class="o2">🌙</span><span class="o3">✦</span><span class="o4">🪢</span>
+    <div class="core">🎀</div>
   </div>
-  <p class="small">Made specially for a sister.</p>
+  <h1>For My Sister<br><span style="color:#f2c7df">Mannu</span></h1>
+  <p>A tiny mystery box of things that probably didn't need to be said... but here we are. 😌</p>
+  <button class="btn" onclick="go('inside')">Open the Mystery</button>
 </section>
 
-<section id="gifts" class="screen">
-  <div class="decor" style="text-align:center">🎀 🪢 🎀</div>
-  <h2 style="text-align:center">Choose Your Gifts</h2>
-  <p style="text-align:center">Three little surprises. No cheating. 😌</p>
-
+<section id="inside" class="screen">
+  <div class="label">THE MYSTERY BOX</div>
+  <h2 style="text-align:center">Pick a Door</h2>
+  <p style="text-align:center">Nothing emotional. Probably. 👀</p>
   <div class="gifts">
-    <button class="gift" onclick="go('gift1')">
-      <span class="giftIcon">🎁</span> Gift 1
-    </button>
-    <button class="gift" onclick="go('gift2')">
-      <span class="giftIcon">🎁</span> Gift 2
-    </button>
-    <button class="gift" onclick="go('gift3')">
-      <span class="giftIcon">🎁</span> Gift 3
-    </button>
-  </div>
-
-  <div class="certificate">
-    <div style="font-size:52px">🏆</div>
-    <h2>NONSENSE SISTER CERTIFICATE</h2>
-    <p style="color:#65433d">
-      Officially awarded to a sister who has successfully mastered
-      the ancient arts of annoying, arguing, laughing and still being
-      completely lovable.
-    </p>
-    <div class="badge">Certified Nonsense Sister</div>
-    <p style="color:#76524b"><strong>Valid forever. No returns. 😂</strong></p>
+    <button class="gift" onclick="go('g1')"><span class="ico">🗝️</span><span><b>Door One</b><small>A completely unnecessary truth</small></span></button>
+    <button class="gift" onclick="go('g2')"><span class="ico">🎭</span><span><b>Door Two</b><small>The official sister report</small></span></button>
+    <button class="gift" onclick="go('g3')"><span class="ico">💌</span><span><b>Door Three</b><small>Something unexpectedly nice</small></span></button>
   </div>
 </section>
 
-<section id="gift1" class="screen center giftPage">
-  <div class="card">
-    <div class="big">😂</div>
-    <h2>The Sister Starter Pack</h2>
-    <p><strong>50% nonsense<br>30% arguments<br>20% “I did nothing!”</strong></p>
-    <div class="tease">And somehow this combination works perfectly. 😌</div>
-    <p>You don't need to be perfect to be a great sister.</p>
-    <button class="btn back" onclick="go('gifts')">Back to Gifts</button>
-  </div>
+<section id="g1" class="screen center">
+ <div class="card reveal">
+  <div class="stamp">CONFIDENTIAL</div>
+  <h2>One Unnecessary Truth</h2>
+  <div class="quote">“A sister can enter a room, change the entire atmosphere, start an argument, and leave like absolutely nothing happened.”</div>
+  <p>Honestly, that's a very impressive skill.</p>
+  <button class="btn alt" onclick="go('inside')">Back</button>
+ </div>
 </section>
 
-<section id="gift2" class="screen center giftPage">
-  <div class="card">
-    <div class="big">😌</div>
-    <h2>Official Sister Rules</h2>
-    <p>Rule 1: You can annoy everyone.</p>
-    <p>Rule 2: You can argue about absolutely anything.</p>
-    <p>Rule 3: Somehow, you are still allowed to be right.</p>
-    <div class="tease">Rule 4: Don't get too excited. This is already enough praise. 😂</div>
-    <button class="btn back" onclick="go('gifts')">Back to Gifts</button>
-  </div>
+<section id="g2" class="screen center">
+ <div class="card reveal">
+  <div class="stamp">OFFICIAL REPORT</div>
+  <h2>Sister Behaviour Report</h2>
+  <p><b>Randomness:</b> Extremely high.</p>
+  <p><b>Drama:</b> Under investigation.</p>
+  <p><b>Ability to say “nothing”:</b> Suspiciously advanced.</p>
+  <p><b>Overall status:</b> Completely irreplaceable.</p>
+  <button class="btn alt" onclick="go('inside')">Back</button>
+ </div>
 </section>
 
-<section id="gift3" class="screen center giftPage">
-  <div class="card">
-    <div class="big">🪢</div>
-    <h2>One Simple Thing</h2>
-    <p>A sister can be loud, dramatic, stubborn, funny and completely unpredictable.</p>
-    <p><strong>And that's exactly what makes having a sister fun.</strong></p>
-    <div class="tease">Basically: premium-level nonsense with a permanent family subscription. 😂</div>
-    <p>Happy Raksha Bandhan, sister. ❤️</p>
-    <button class="btn back" onclick="go('gifts')">Back to Gifts</button>
-  </div>
+<section id="g3" class="screen center">
+ <div class="card reveal">
+  <div style="font-size:65px">💌</div>
+  <h2>Okay, One Nice Thing</h2>
+  <p>Whatever the arguments, teasing and nonsense are...</p>
+  <div class="quote"><strong>Being a sister is one of those things you don't have to earn. You just have it — and that's pretty special.</strong></div>
+  <p>Happy Raksha Bandhan, Mannu. ❤️</p>
+  <button class="btn alt" onclick="go('inside')">Back</button>
+ </div>
+</section>
+
+<section id="cert" class="screen center">
+ <div class="certificate">
+  <div class="seal">🏆</div>
+  <h2>NONSENSE SISTER CERTIFICATE</h2>
+  <p>This certifies that the holder has successfully completed the lifelong course of:</p>
+  <div class="name">Mannu</div>
+  <p><b>Being a Sister</b></p>
+  <p>Subjects include: teasing, arguing, laughing, stealing attention and creating unnecessary chaos.</p>
+  <p><b>Result: Passed. Permanently.</b></p>
+ </div>
+ <button class="btn" onclick="go('inside')">Back to Mystery</button>
 </section>
 
 </div>
-
 <script>
 function go(id){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ scrollTo({top:0,behavior:'smooth'});
 }
 </script>
 </body>
