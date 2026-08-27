@@ -3,116 +3,108 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>For My Sister Mannu — Concept C</title>
+<meta name="theme-color" content="#07131b">
+<title>For Palak Didi ❤️</title>
 <style>
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Georgia,serif}
-body{background:#120b18;color:#f8efe6}
-.app{width:min(100%,560px);min-height:100vh;margin:auto;overflow:hidden;
-background:linear-gradient(160deg,#120b18,#21112d 48%,#0b0912);padding:22px 18px 42px}
-.screen{display:none;min-height:calc(100vh - 64px);animation:enter .45s ease}
-.screen.active{display:flex;flex-direction:column}
+body{background:#07131b;color:#edf4f1}
+.app{width:min(100%,560px);min-height:100vh;margin:auto;padding:22px 18px 45px;overflow:hidden;
+background:radial-gradient(circle at 50% 0,#1d5660 0,#0c2730 32%,#07131b 76%)}
+.page{display:none;min-height:calc(100vh - 67px);animation:enter .45s ease}
+.page.active{display:flex;flex-direction:column}
 .center{justify-content:center;align-items:center;text-align:center}
-@keyframes enter{from{opacity:0;transform:scale(.97) translateY(12px)}to{opacity:1;transform:none}}
-h1{font-size:42px;line-height:1.02;margin:0 0 16px;color:#f7d9e8}
-h2{font-size:31px;line-height:1.08;margin:0 0 15px;color:#e8b9ff}
-p{font-size:15px;line-height:1.65;color:#d8cadb}
-.card{width:100%;padding:27px 19px;border-radius:26px;background:#17101fe8;border:1px solid #9b6bc055;box-shadow:0 22px 55px #0009}
-.btn{border:1px solid #e5a7cf;border-radius:999px;padding:13px 24px;margin:8px 3px;background:linear-gradient(135deg,#d77bb1,#8e68dc);color:#fff;font-weight:bold;cursor:pointer}
-.btn.alt{background:#191020;color:#e7b9dc}
-.orbit{width:290px;height:290px;border-radius:50%;position:relative;margin:4px auto 25px;border:1px solid #c77ee655;box-shadow:0 0 70px #a64cbb25,inset 0 0 45px #d98bd015}
-.orbit:before,.orbit:after{content:"";position:absolute;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #e2b0dc30}
-.orbit:before{width:210px;height:210px}.orbit:after{width:125px;height:125px}
-.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:75px;filter:drop-shadow(0 0 25px #f2b4d8);animation:float 2.4s ease-in-out infinite}
-@keyframes float{50%{transform:translate(-50%,-57%) scale(1.04)}}
-.orbit i{position:absolute;font-style:normal;font-size:28px;filter:drop-shadow(0 0 9px #e7a6d0)}
-.o1{left:48%;top:3%}.o2{right:4%;top:47%}.o3{left:44%;bottom:2%}.o4{left:3%;top:47%}
-.label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#bda4c8;text-align:center}
-.gifts{display:grid;gap:12px;margin-top:20px}
-.gift{border:1px solid #795a8f;border-radius:20px;background:#181021;color:#f6e9f4;padding:18px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:14px}
-.gift .ico{font-size:38px}.gift b{font-size:19px}.gift small{display:block;color:#ad9bb1;margin-top:4px}
-.reveal{min-height:400px;display:flex;flex-direction:column;justify-content:center;text-align:center}
-.quote{padding:17px;border:1px solid #8b5d9d;border-radius:17px;background:#0f0a15;color:#e9d5e5;margin:15px 0}
-.stamp{display:inline-block;padding:8px 15px;border:1px solid #c88cc0;border-radius:50px;color:#eab6db;margin-bottom:15px}
-.certificate{background:#f2e5d4;color:#342031;padding:25px 17px;border-radius:12px;border:4px double #8d5278;text-align:center;transform:rotate(-1deg);box-shadow:0 18px 35px #0008}
-.certificate h2{color:#71375d}.certificate p{color:#543c4f}.seal{font-size:48px}
-.name{color:#8c3f72;font-size:26px;font-style:italic;font-weight:bold;margin:8px 0 12px}
+@keyframes enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.kicker{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#a9d8d2;text-align:center}
+h1{font-size:39px;line-height:1.05;color:#f5d9a0;margin:10px 0 16px;text-align:center}
+h2{font-size:30px;line-height:1.1;color:#d9eee9;margin:0 0 16px;text-align:center}
+p{font-size:15px;line-height:1.65;color:#c7dad7}
+.card{width:100%;padding:28px 20px;border:1px solid #70a9a255;border-radius:25px;background:#081920e8;box-shadow:0 20px 50px #0008;text-align:center}
+.btn{border:1px solid #d8b76d;border-radius:999px;padding:12px 25px;margin:9px 3px;background:linear-gradient(135deg,#e7c779,#91c8c0);color:#11252a;font-weight:bold;cursor:pointer}
+.btn.alt{background:#0a1c23;color:#cfe5df}
+.symbol{font-size:68px;margin-bottom:14px;filter:drop-shadow(0 0 18px #dcb86a55)}
+.ornament{font-size:25px;color:#d8b66b;letter-spacing:9px;margin-bottom:18px}
+.gifts{display:grid;gap:13px;margin-top:18px}
+.gift{width:100%;min-height:105px;padding:17px;border:1px solid #477b80;border-radius:20px;background:#0a1c23;color:#eef6f2;display:flex;align-items:center;gap:15px;text-align:left;cursor:pointer}
+.gift .ico{font-size:38px}.gift b{font-size:19px}.gift small{display:block;color:#9ebbb7;margin-top:4px}
+.note{margin-top:17px;padding:17px;border-left:3px solid #d8b66b;background:#0b2027;border-radius:12px;text-align:left}
+.note strong{color:#e5c984}
+.reveal{min-height:410px;display:flex;flex-direction:column;justify-content:center}
+.divider{width:65px;height:1px;background:#d4b366;margin:13px auto 20px}
+.signature{font-style:italic;color:#e0c789}
+.cert{width:100%;background:#f4ead8;color:#3b3029;border:4px double #ad8440;border-radius:12px;padding:27px 18px;text-align:center;box-shadow:0 18px 38px #0008}
+.cert h2{color:#345e5d}.cert p{color:#5b4c43}.name{font-size:31px;font-style:italic;color:#8b5c3e;font-weight:bold}
 </style>
 </head>
 <body>
 <div class="app">
 
-<section id="home" class="screen active center">
-  <div class="label">Concept C</div>
-  <div class="orbit">
-    <span class="o1">✦</span><span class="o2">🌙</span><span class="o3">✦</span><span class="o4">🪢</span>
-    <div class="core">🎀</div>
+<section id="home" class="page active center">
+  <div class="ornament">✦ ✦ ✦</div>
+  <div class="symbol">🪔</div>
+  <div style="font-size:28px;margin:0 0 12px">💖 ✨ 🪢 ✨ 💖</div>
+  <h1>Wishing You a Happy Raksha Bandhan,<br>Palak Didi ❤️</h1>
+  <div style="font-size:27px;line-height:1.25;color:#f5d9a0;font-weight:bold;margin:10px 0 6px">
+    💕 A Little Something 💕<br>
+    <span style="font-size:30px;color:#e8b9ff">From Your Handsome Brother 😌❤️</span>
   </div>
-  <h1>For My Sister<br><span style="color:#f2c7df">Mannu</span></h1>
-  <p>A tiny mystery box of things that probably didn't need to be said... but here we are. 😌</p>
-  <button class="btn" onclick="go('inside')">Open the Mystery</button>
+  <div style="font-size:25px;margin-top:8px">🌸 💗 🪔 💗 🌸</div>
+  <button class="btn" onclick="go('intro')">Open ✨</button>
 </section>
 
-<section id="inside" class="screen">
-  <div class="label">THE MYSTERY BOX</div>
-  <h2 style="text-align:center">Pick a Door</h2>
-  <p style="text-align:center">Nothing emotional. Probably. 👀</p>
-  <div class="gifts">
-    <button class="gift" onclick="go('g1')"><span class="ico">🗝️</span><span><b>Door One</b><small>A completely unnecessary truth</small></span></button>
-    <button class="gift" onclick="go('g2')"><span class="ico">🎭</span><span><b>Door Two</b><small>The official sister report</small></span></button>
-    <button class="gift" onclick="go('g3')"><span class="ico">💌</span><span><b>Door Three</b><small>Something unexpectedly nice</small></span></button>
+<section id="intro" class="page center">
+  <div class="card">
+    <div class="symbol" style="font-size:55px">🪢</div>
+    <div class="kicker">A Note Before We Begin</div>
+    <h2>Some Bonds Don't Need a Title</h2>
+    <div class="divider"></div>
+    <p>No matter that you are my cousin, you are also one of the closest people to me.</p>
+    <p>So this Raksha Bandhan, I simply wanted to make something that says that in its own small way.</p>
+    <button class="btn" onclick="go('g1')">Continue</button>
   </div>
 </section>
 
-<section id="g1" class="screen center">
+<section id="g1" class="page center">
  <div class="card reveal">
-  <div class="stamp">CONFIDENTIAL</div>
-  <h2>One Unnecessary Truth</h2>
-  <div class="quote">“A sister can enter a room, change the entire atmosphere, start an argument, and leave like absolutely nothing happened.”</div>
-  <p>Honestly, that's a very impressive skill.</p>
-  <button class="btn alt" onclick="go('inside')">Back</button>
+  <div class="symbol">🌸</div>
+  <h2>A Thought</h2>
+  <div class="divider"></div>
+  <p>Some people become close simply because life keeps bringing them into our happiest memories.</p>
+  <p>I'm glad you're one of those people for me.</p>
+  <p class="signature">With warm wishes, always.</p>
+  <button class="btn" onclick="go('g3')">Continue</button>
  </div>
 </section>
 
-<section id="g2" class="screen center">
+
+
+<section id="g3" class="page center">
  <div class="card reveal">
-  <div class="stamp">OFFICIAL REPORT</div>
-  <h2>Sister Behaviour Report</h2>
-  <p><b>Randomness:</b> Extremely high.</p>
-  <p><b>Drama:</b> Under investigation.</p>
-  <p><b>Ability to say “nothing”:</b> Suspiciously advanced.</p>
-  <p><b>Overall status:</b> Completely irreplaceable.</p>
-  <button class="btn alt" onclick="go('inside')">Back</button>
+  <div class="symbol">✨</div>
+  <h2>A Wish</h2>
+  <div class="divider"></div>
+  <p>May the coming year bring you peace, happiness, good health and many reasons to smile.</p>
+  <p>May you always have people around you who genuinely care for you.</p>
+  <p><strong>Happy Raksha Bandhan, Palak Didi. ❤️</strong></p>
+  <button class="btn alt" onclick="go('cert')">One Last Thing</button>
  </div>
 </section>
 
-<section id="g3" class="screen center">
- <div class="card reveal">
-  <div style="font-size:65px">💌</div>
-  <h2>Okay, One Nice Thing</h2>
-  <p>Whatever the arguments, teasing and nonsense are...</p>
-  <div class="quote"><strong>Being a sister is one of those things you don't have to earn. You just have it — and that's pretty special.</strong></div>
-  <p>Happy Raksha Bandhan, Mannu. ❤️</p>
-  <button class="btn alt" onclick="go('inside')">Back</button>
+<section id="cert" class="page center">
+ <div class="cert">
+  <div style="font-size:50px">🪔</div>
+  <h2>A Raksha Bandhan Wish</h2>
+  <p>This little note is for</p>
+  <div class="name">Palak Didi</div>
+  <p>May this Raksha Bandhan bring a little more happiness, a little more peace, and many beautiful moments ahead.</p>
+  <p><strong>With respect, warmth and best wishes.</strong></p>
  </div>
-</section>
-
-<section id="cert" class="screen center">
- <div class="certificate">
-  <div class="seal">🏆</div>
-  <h2>NONSENSE SISTER CERTIFICATE</h2>
-  <p>This certifies that the holder has successfully completed the lifelong course of:</p>
-  <div class="name">Mannu</div>
-  <p><b>Being a Sister</b></p>
-  <p>Subjects include: teasing, arguing, laughing, stealing attention and creating unnecessary chaos.</p>
-  <p><b>Result: Passed. Permanently.</b></p>
- </div>
- <button class="btn" onclick="go('inside')">Back to Mystery</button>
+ <button class="btn" onclick="go('home')">Replay</button>
 </section>
 
 </div>
 <script>
 function go(id){
- document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
  document.getElementById(id).classList.add('active');
  scrollTo({top:0,behavior:'smooth'});
 }
